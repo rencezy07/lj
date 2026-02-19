@@ -24,7 +24,7 @@ export function Projects() {
         />
 
         {/* Category filter */}
-        <div className="mb-12 flex flex-wrap gap-2">
+        <div className="mb-8 flex flex-wrap gap-2">
           {categories.map((category) => (
             <button
               key={category}
@@ -51,20 +51,23 @@ export function Projects() {
           ))}
         </div>
 
-        {/* Project grid */}
+        {/* Project list */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 gap-6 md:grid-cols-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="border-t border-border"
           >
             {filteredProjects.map((project, index) => (
               <ProjectCard
-                key={project.title}
-                {...project}
+                key={project.slug}
+                slug={project.slug}
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
                 index={index}
               />
             ))}

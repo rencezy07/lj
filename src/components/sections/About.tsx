@@ -553,33 +553,7 @@ export function About() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Category quick-jump footer */}
-          <motion.div
-            className="mt-10 pt-6 border-t border-border/40"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-          >
-            <div className="flex flex-wrap items-center gap-x-1 gap-y-1 text-xs font-mono text-muted-foreground/40">
-              <span className="mr-2 uppercase tracking-widest">Jump:</span>
-              {skillCategories.map((cat, ci) => (
-                <span key={cat.label} className="flex items-center">
-                  {ci > 0 && <span className="mx-1.5 select-none">/</span>}
-                  <motion.button
-                    onClick={() => setActiveTab(ci)}
-                    className={`transition-colors hover:text-foreground ${
-                      activeTab === ci ? "text-foreground/70" : ""
-                    }`}
-                    whileHover={{ x: 2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                  >
-                    {cat.label}
-                  </motion.button>
-                </span>
-              ))}
-            </div>
-          </motion.div>
+
         </AnimatedSection>
       </div>
     </section>

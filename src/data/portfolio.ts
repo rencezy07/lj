@@ -72,6 +72,7 @@ export const specializations = [
 
 export const projects = [
   {
+    slug: "drone-security-scanner",
     title: "Drone Security Scanner",
     description:
       "A desktop-based AI surveillance system that detects and classifies soldiers and civilians in real-time aerial drone footage using deep learning.",
@@ -82,6 +83,7 @@ export const projects = [
     category: "Full Stack",
   },
   {
+    slug: "opportuniseek",
     title: "OpportuniSeek",
     description: "A full-stack internship platform connecting students with companies — featuring listings, application tracking, and real-time status notifications.",
     tech: ["Laravel", "Vue.js", "Inertia.js", "Tailwind CSS", "PHP"],
@@ -91,6 +93,7 @@ export const projects = [
     category: "Full Stack",
   },
   {
+    slug: "transcrypt",
     title: "TransCrypt",
     description:
       "A blockchain-powered credential system for universities — featuring OCR processing, IPFS storage, and immutable transcript records on Hyperledger Fabric.",
@@ -101,6 +104,7 @@ export const projects = [
     category: "Full Stack",
   },
   {
+    slug: "cybertrio",
     title: "CyberTrio",
     description:
       "A modern job recruitment and hiring platform for a tech company specializing in cybersecurity, digital transformation, and emerging technologies. Features user authentication, job listings, and application management.",
